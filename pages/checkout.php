@@ -546,7 +546,7 @@ if ( empty( $default_gateway ) ) {
 		do_action('pmpro_checkout_after_captcha');
 	?>
 
-	<?php do_action("pmpro_checkout_before_submit_button"); ?>
+		<?php do_action("pmpro_checkout_before_submit_button", $pmpro_level); ?>
 
 	<div class="<?php echo esc_attr( pmpro_get_element_class( 'pmpro_submit' ) ); ?>">
 		<hr />

@@ -365,7 +365,7 @@ function pmpro_membership_content_filter( $content, $skipcheck = false ) {
 				$content = strip_shortcodes( $content );
 				$content = str_replace(']]>', ']]&gt;', $content);
 				$content = wp_strip_all_tags( $content );
-				$excerpt_length = apply_filters('excerpt_length', 55);
+				$excerpt_length = apply_filters('excerpt_length', 105);
 				$words = preg_split("/[\n\r\t ]+/", $content, $excerpt_length + 1, PREG_SPLIT_NO_EMPTY);
 				if ( count($words) > $excerpt_length ) {
 					array_pop($words);
