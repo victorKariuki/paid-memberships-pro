@@ -275,6 +275,8 @@ function pmpro_shortcode_account($atts, $content=null, $code="")
 						$invoice->getMemberOrderByID($invoice_id);
 						$invoice->getMembershipLevel();
 
+						$display_status = $invoice->status;
+
 						if ( in_array( $invoice->status, array( '', 'success', 'cancelled' ) ) ) {
 						    $display_status = esc_html__( 'Paid', 'paid-memberships-pro' );
 						} elseif ( $invoice->status == 'pending' ) {
